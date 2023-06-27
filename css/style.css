@@ -1,0 +1,670 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+    list-style-type: none;
+    font-weight: normal;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background-color:#F4F5F7
+}
+
+html { 
+    scroll-behavior: smooth;
+}
+
+/* ----------HEADER SECTION---------- */
+
+/* Flex container */
+.nav-section { 
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    letter-spacing: 1px;
+    background-color: #fff;
+    padding: 0% 10%;
+}
+
+
+/* Flex box and items */
+.nav-title { 
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-title p {
+    font-size: 18px;
+}
+
+.nav-title img { 
+    margin-right: 15px;
+    height: 60px;
+    padding: 3%;
+}
+
+.nav-links { 
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 25px;
+}
+
+.nav-links a { 
+    color: #141414;
+}
+
+.nav-links a:hover {
+    color: #31aae2;
+    font-weight: bold;
+}
+
+/* ----------LANDING PAGE---------- */
+
+/* Block container */
+.landing-page {
+    text-align: center;
+    padding: 110px 10% 230px 10%;
+    /* For Background img (cat) */
+    background-image: url(../imgs/IMG_8532_Original.jpeg);
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: 85% 0%;
+    /**/
+}
+
+.landing-page h1{
+    padding: 60px 200px 50px 0px;
+    font-size: 50px;
+    letter-spacing: 1px;
+}
+
+.landing-page h2{
+    margin-bottom: 10px;
+    padding: 0px 200px 0px 0px;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+.landing-page p {
+    padding: 0px 200px 0px 0px;
+    font-size: 18px;
+}
+
+
+/* ----------MY PROFILE PAGE---------- */
+
+
+/* Block container */
+.profile-container {
+    margin: 100px 10%;
+    padding: 3% 5%;
+    border: solid 0.5px #141414;
+}
+
+.profile {
+    text-align: center;
+}
+
+.profile h1 {
+    position: relative;/* For underline */
+    padding-bottom: 18px;
+    font-size: 25px;
+}
+
+.profile h1:before {
+    content: '';
+    position: absolute; /* For underline */
+    left: 50%;
+    bottom: 15px; /*Vertical position of line*/
+    width: 100px; /*Line length*/
+    height: 1px; /*Line thickness*/
+    transform: translateX(-50%); /*Justidication*/
+    background-color: black; /*Line color*/
+    border-radius: 2px; /*Roundness of a line*/
+  }
+
+.profile h2 {
+    position: relative;/* For underline */
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+.profile h2:before {
+    content: '';
+    position: absolute; /* For underline */
+    left: 50%;
+    bottom: 15px; /*Vertical position of line*/
+    width: 100px; /*Line length*/
+    height: 1px; /*Line thickness*/
+    transform: translateX(-50%); /*Justification*/
+    background-color: black; /*Line color*/
+    border-radius: 2px; /*Roundness of a line*/
+  }
+
+.profile p {
+    padding-bottom: 30px;
+    font-size: 18px;
+}
+
+.map { /* Google Map container*/
+    position: relative;
+    width: 70%;
+    padding-top: 30%;
+}
+
+.map iframe { /* Google Map */
+    position: absolute;
+    top: 0;
+    left: 20%;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ----------MY HOBBY PAGE---------- */
+
+
+/* Flex container */
+.hobby-container {
+    display: flex;
+    padding: 0% 10%;
+}
+
+/* Flex Box and items */
+
+/* Sidebar */
+.hobby-sidebar {
+    display: flex;
+    flex-direction: column; /* Vertical item */
+    padding: 30px 15px;
+    row-gap: 20px;
+    padding-top: 25px;
+}
+
+.hobby-sidebar h1 {
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.hobby-sidebar ul {
+    display: flex;
+    flex-direction: column; /* Vertical item */
+    row-gap: 15px;
+    position: sticky; /* Tracking sidebar */
+    top: 5px;
+}
+
+.hobby-sidebar a {
+    font-size: 20px;
+    color: #aaaaaa;
+}
+
+.hobby-sidebar img { /* Scroll arrow img */
+    width: 20px;
+    margin-left: auto;
+    position: sticky; /* Tracking sidebar */
+    top: 62%;
+}
+
+.li-fishing {
+    position: relative; /* For sidebar links */
+    border-left: #31aae2 solid 2px;
+    padding-left: 10px;
+}
+
+.li-fishing a:hover {
+    color: black;
+}
+
+.li-fishing a::after {
+    position: absolute; /* For sidebar links */
+    bottom: 0; /*Vertical position of line*/
+    left: 50%; /* Justification */
+    content: '';
+    width: 0; /* Spreading under line */
+    height: 2px; /*Line thickness*/
+    background-color: #31aae2; /* Line color */
+    transition: .3s; /* Spreading speed of underline */
+    transform: translateX(-50%); /* Justification */
+  }
+  
+.li-fishing a:hover::after{
+    width: 100%;
+}
+
+.li-snowboarding {
+    position: relative;
+    border-left: #31aae2 solid 2px;
+    padding-left: 10px;
+}
+
+.li-snowboarding a:hover {
+    color: black;
+}
+
+.li-snowboarding a::after { /* Same gimmick */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #31aae2;
+    transition: .3s;
+    transform: translateX(-50%);
+  }
+  
+.li-snowboarding a:hover::after{
+    width: 100%;
+}
+
+.li-camping {
+    position: relative;
+    border-left: #31aae2 solid 2px;
+    padding-left: 10px;
+}
+
+.li-camping a:hover {
+    color: black;
+}
+
+.li-camping a::after { /* Same gimmick */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #31aae2;
+    transition: .3s;
+    transform: translateX(-50%);
+  }
+  
+.li-camping a:hover::after{
+    width: 100%;
+}
+
+.li-motorcycle {
+    position: relative;
+    border-left: #31aae2 solid 2px;
+    padding-left: 10px;
+}
+
+.li-motorcycle a:hover {
+    color: black;
+}
+
+.li-motorcycle a::after { /* Same gimmick */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #31aae2;
+    transition: .3s;
+    transform: translateX(-50%);
+  }
+  
+.li-motorcycle a:hover::after{
+    width: 100%;
+}
+
+.li-sakamoto {
+    position: relative;
+    border-left: #31aae2 solid 2px;
+    padding-left: 10px;
+}
+
+.li-sakamoto a:hover {
+    color: black;
+}
+
+.li-sakamoto a::after { /* Same gimmick */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: #31aae2;
+    transition: .3s;
+    transform: translateX(-50%);
+  }
+  
+.li-sakamoto a:hover::after{
+    width: 100%;
+}
+
+/* Gallery */
+#fishing-section {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 30px;
+    padding-top: 8%;
+    padding-left: 2%;
+    position: relative; /* For titles and underline */
+}
+
+#fishing-section h2 {
+    position: absolute; /* For titles and underline */
+    top: 3%;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+#fishing-section h2::before {
+    content: '';
+    position: absolute; /* For titles and underline */
+    left: 110%;
+    bottom: 20px; /*Vertical position of line*/
+    width: 820px; /*Line length*/
+    height: 0.5px; /*Line thickness*/
+    background-color: #31aae2; /*Line color*/
+    border-radius: 5px; /*Roundness of a line*/
+}
+
+#fishing-section img {
+    height: 205px;
+    width: 100%;
+}
+
+#fishing-section img:hover{
+    transform: scale(1.05);
+    transition: transform 0.6s ease;
+}
+
+/*--------------------------------------------*/
+
+#snowboarding-section { /* Same gimmick */
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 30px;
+    padding-top: 8%;
+    padding-left: 2%;
+    position: relative;
+}
+
+#snowboarding-section h2 {
+    position: absolute;
+    top: 3%;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+#snowboarding-section h2::before {
+    content: '';
+    position: absolute;
+    left: 110%;
+    bottom: 20px;/*線の上下位置*/
+    width: 700px;/*線の長さ*/
+    height: 1px;/*線の太さ*/
+    background-color: #31aae2;/*線の色*/
+    border-radius: 2px;/*線の丸み*/
+}
+
+#snowboarding-section img {
+    height: 205px;
+    width: 100%;
+}
+
+#snowboarding-section img:hover{
+    transform: scale(1.05);
+    transition: transform 0.6s ease;
+}
+
+/*--------------------------------------------*/
+
+#camping-section { /* Same gimmick */
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 30px;
+    padding-top: 8%;
+    padding-left: 2%;
+    position: relative;
+}
+
+#camping-section h2 {
+    position: absolute;
+    top: 3%;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+#camping-section h2::before {
+    content: '';
+    position: absolute;
+    left: 110%;
+    bottom: 20px;/*線の上下位置*/
+    width: 790px;/*線の長さ*/
+    height: 1px;/*線の太さ*/
+    background-color: #31aae2;/*線の色*/
+    border-radius: 2px;/*線の丸み*/
+}
+
+#camping-section img {
+    height: 205px;
+    width: 100%;
+}
+
+#camping-section img:hover{
+    transform: scale(1.05);
+    transition: transform 0.6s ease;
+}
+
+/*--------------------------------------------*/
+
+#motorcycle-section { /* Same gimmick */
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 30px;
+    padding-top: 8%;
+    padding-left: 2%;
+    position: relative;
+}
+
+#motorcycle-section h2 {
+    position: absolute;
+    top: 3%;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+#motorcycle-section h2::before {
+    content: '';
+    position: absolute;
+    left: 110%;
+    bottom: 20px;/*線の上下位置*/
+    width: 750px;/*線の長さ*/
+    height: 1px;/*線の太さ*/
+    background-color: #31aae2;/*線の色*/
+    border-radius: 2px;/*線の丸み*/
+}
+
+#motorcycle-section img {
+    height: 205px;
+    width: 100%;
+}
+
+#motorcycle-section img:hover{
+    transform: scale(1.05);
+    transition: transform 0.6s ease;
+}
+
+/*--------------------------------------------*/
+
+#sakamoto-section { /* Same gimmick */
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    column-gap: 30px;
+    padding-top: 8%;
+    padding-left: 2%;
+    padding-bottom: 10%;
+    position: relative;
+}
+
+#sakamoto-section h2 {
+    position: absolute;
+    top: 3%;
+    font-size: 30px;
+    letter-spacing: 2px;
+}
+
+#sakamoto-section h2::before {
+    content: '';
+    position: absolute;
+    left: 110%;
+    bottom: 20px;/*線の上下位置*/
+    width: 750px;/*線の長さ*/
+    height: 1px;/*線の太さ*/
+    background-color: #31aae2;/*線の色*/
+    border-radius: 2px;/*線の丸み*/
+}
+
+#sakamoto-section img {
+    height: 205px;
+    width: 100%;
+}
+
+#sakamoto-section img:hover{
+    transform: scale(1.05);
+    transition: transform 0.6s ease;
+}
+
+
+/* ----------MY FAMILLY PAGE---------- */
+
+/* Block container with float*/
+.familly-container {
+    margin: 60px 10%;
+}
+
+.familly-section {
+    border: #696969 solid 0.5px;
+    padding: 30px;
+}
+
+.familly-section img {
+    height: 200px;
+    float: left; /* float img */
+    margin-right: 30px;
+    margin-bottom: 10px;
+} 
+
+.familly-section h1{
+    font-size: 30px;
+    padding-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.familly-section h2 {
+    padding-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.familly-section p {
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+/* ----------SAKAMOTO PAGE---------- */
+
+/* Block container with float*/
+.cat-container {
+    margin: 60px 10%;
+}
+
+.cat-section {
+    border: #696969 solid 0.5px;
+    padding: 30px;
+}
+
+.cat-section img {
+    height: 200px;
+    float: right; /* float img */
+    margin-left: 30px;
+    margin-bottom: 10px;
+} 
+
+.cat-section h1{
+    font-size: 30px;
+    padding-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.cat-section h2 {
+    padding-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.cat-section p {
+    letter-spacing: 1px;
+    line-height: 1.5;
+}
+
+/* ----------FOOTER---------- */
+
+/* Flex container */
+#footer-container {
+    display: flex;
+    background-color: #696969;
+    color: #f9f9f9;
+    text-align: center;
+    flex-direction: column; /* For my design */
+}
+
+#footer-container a {
+    color: #f9f9f9;
+}
+
+/* Flex box and items */
+.footer-logo, .footer-links, .footer-sm{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo {
+    column-gap: 20px;
+    padding: 30px;
+}
+
+.footer-logo img {
+    width: 50px;
+}
+
+.footer-links {
+    column-gap: 4%;
+    margin-bottom: 50px;
+}
+
+.footer-links a:hover {
+    font-weight: bold;
+}
+
+.footer-sm { /* Social Media logo */
+    column-gap: 20px;
+    padding-bottom: 15px;
+}
+
+.footer-sm img{
+    width: 30px;
+}
+
+.footer-sm :hover{
+    transform: translateY(-5px);
+    transition: .3s;
+}
