@@ -10,26 +10,157 @@
     <body>
         <!-- HEADER -->
         <nav class="nav-section"> <!-- ←This section has 2 block containers, one of those is for image and title, the other one is for links. -->
-            <div class="nav-title">
-                <img src="imgs/black-cat.png" alt="Icon of the cat">
-                <p>My first portfolio</p>
+                <div>
+                    <div class="nav-side">
+                        <a href="#"><img class="nav-image" src="imgs/black-cat.png" alt="Icon of the cat"></a>
+                        <ul class="nav-links">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#profile-container">My Profile</a></li>
+                            <li><a href="#hobby-container">My Hobbies</a></li>
+                            <li><a href="#familly-container">My Familly</a></li>
+                            <li><a href="#cat-container">Sakamoto</a></li>
+                        </ul>
+                        <ul class="header-sm">
+                            <li><a href="#"><img src="imgs/instagram.svg" alt="My Instagram account"></a></li>
+                            <li><a href="#"><img src="imgs/twitter.svg" alt="My Twitter account"></a></li>
+                            <li><a href="#"><img src="imgs/linkedin.svg" alt="My Linkedin account"></a></li>
+                        </ul>
+                    </div>
+                    <div class="nav-title">
+                        <div>
+                            <h1>My first portfolio</h1>
+                        </div>
+                    </div>
+                    <div class="main-image">
+                        <img src="imgs/goraku-1.JPG" alt="">
+                    </div>
+                </div>
+                <div>
+                    <div class="sp-link">
+                        <input type="checkbox" id="hamburger-check" class="hamburger-hidden">
+                        <label for="hamburger-check" class="hamburger-open"><span></span></label>
+                        <div class="hamburger-content">
+                            <ul class="hamburger-link"> 
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#profile-container">My Profile</a></li>
+                                <li><a href="#hobby-container">My Hobbies</a></li>
+                                <li><a href="#familly-container">My Familly</a></li>
+                                <li><a href="#cat-container">Sakamoto</a></li>
+                            </ul>    
+                            <ul class="hamburger-sm">
+                                <li class="sp-sm"><a href="#"><img src="imgs/instagram.svg" alt="My Instagram account"></a></li>
+                                <li class="sp-sm"><a href="#"><img src="imgs/twitter.svg" alt="My Twitter account"></a></li>
+                                <li class="sp-sm"><a href="#"><img src="imgs/linkedin.svg" alt="My Linkedin account"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="pages/profile.html">My Profile</a></li>
-                <li><a href="pages/hobby.html">My Hobbies</a></li>
-                <li><a href="pages/familly.html">My Familly</a></li>
-                <li><a href="pages/cat.html">Sakamoto</a></li>
-            </ul>
         </nav>
         <!-- MAIN -->
-        <main class="landing-page"><!-- ←This section has 2 block containers. -->
-            <section>
-                <h1>My First Portfolio</h1>
+        <main class="container"><!-- ←This section has 2 block containers. -->
+            <section id="profile-container">
+                <h2>MY PROFILE</h2>
+                <article class="profile-section">
+                    <div class="profile">                        
+                        <p>Mao Yamamoto</p>
+                        <h3>HOME TOWN</h3>
+                        <p>Matsudo, Chiba, Japan</p>
+                        <p>I was born and raised in Matsudo City, Chiba Prefecture. <br>
+                            There is Disneyland in Chiba. <br>However, its name is "<em>Tokyo</em>" Disneyland.</p>
+                    </div>
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103554.18660148009!2d139.85818295476497!3d35.798255777170766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018837c157a353d%3A0xe9a6e851b12a2799!2z5pel5pys44CB5Y2D6JGJ55yM5p2-5oi45biC!5e0!3m2!1sja!2sca!4v1685925152002!5m2!1sja!2sca"
+                            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </article>
             </section>
-            <section>
-                <h2>Hello</h2>
-                <p>This is my first portfolio for the future.</p>
+            <section id="hobby-container">
+                <h2>Hobbies</h2>
+                <div class="hobby-section">
+                    <aside class="hobby-sidebar">
+                        <ul>
+                            <li class="li-hobby"><a href="#fishing-section">Fishing</a></li>
+                            <li class="li-hobby"><a href="#snowboarding-section">Snowboarding</a></li>
+                            <li class="li-hobby"><a href="#camping-section">Camping</a></li>
+                            <li class="li-hobby"><a href="#motorcycle-section">Motorcycle</a></li>
+                            <li class="li-hobby"><a href="#sakamoto-section">Sakamoto</a></li>
+                        </ul>
+                        <!-- <img src="imgs/scroll.png" alt="Scroll picture"> -->
+                    </aside>
+                    <article class="hobby-gallery">
+                        <div id="fishing-section"><!-- ←Id for page scroll -->
+                            <h3>Fishing</h3>
+                            <section class="fishing">
+                                <h4><img src="imgs/fishing1.jpg" alt="Fish picture"></h4>
+                                <h4><img src="imgs/fishing2.jpg" alt="Cooked fish pucture"></h4>
+                                <h4><img src="imgs/fishing3.jpg" alt="My friend with fish"></h4>
+                                <h4><img src="imgs/fishing4.jpg" alt="My friend in a port "></h4>
+                                <h4><img src="imgs/goraku.JPG" alt="Me with my friend"></h4>
+                                <h4><img src="imgs/yuuhi.jpg" alt="Beautiful sunset"></h4>
+                            </section>
+                        </div>
+                        <div id="snowboarding-section">
+                            <h3>Snowboarding</h3>
+                            <section class="snowboarding">
+                                <h4><img src="imgs/snowboarding1.jpg" alt="My friend on snow"></h4>
+                                <h4><img src="imgs/snowboarding2.jpg" alt="My car covered with snow"></h4>
+                                <h4><img src="imgs/snowboarding4.jpg" alt="My friend on a lift"></h4>
+                                <h4><img src="imgs/snowboarding6.jpg" alt="Beautiful sky"></h4>
+                                <h4><img src="imgs/snowboarding3.jpg" alt="X-ray of my friend's broken finger"></h4>
+                            </section>
+                        </div>
+                        <div id="camping-section">
+                            <h3>Camping</h3>    
+                            <section class="camping">
+                                <h4><img src="imgs/camping1.jpg" alt="Beautiful Mt.Fuji"></h4>
+                                <h4><img src="imgs/camping2.jpg" alt="My best friends"></h4>
+                                <h4><img src="imgs/camping3.jpg" alt="My best friends"></h4>
+                                <h4><img src="imgs/camping4.jpg" alt="Beautiful Mt.Fuji 2"></h4>
+                                <h4><img src="imgs/camping5.jpg" alt="Campfire"></h4>
+                                <h4><img src="imgs/camping6.jpg" alt="My hilarious friend"></h4>
+                            </section>
+                        </div>
+                        <div id="motorcycle-section">
+                            <h3>Motorcycle</h3>
+                            <section class="motorcycle">
+                                <h4><img src="imgs/motorcycle1.jpg" alt="My coolest moto"></h4>
+                                <h4><img src="imgs/motorcycle2.jpg" alt="CBR400RR"></h4>
+                                <h4><img src="imgs/motorcycle3.jpg" alt="KDX125SR"></h4>
+                                <h4><img src="imgs/motorcycle4.jpg" alt="My helmet"></h4>
+                                <h4><img src="imgs/motorcycle5.jpg" alt="When I fell down on a road"></h4>
+                            </section>
+                        </div>
+                        <div id="sakamoto-section">
+                            <h3>Sakamoto</h3>
+                            <section class="sakamoto">
+                                <h4><img src="imgs/sakamoto1.jpg" alt="My cat on me"></h4>
+                                <h4><img src="imgs/sakamoto2.jpg" alt="My cat in arm"></h4>
+                                <h4><img src="imgs/sakamoto3.jpg" alt="Before castration"></h4>
+                                <h4><img src="imgs/sakamoto4.jpg" alt="After castration"></h4>
+                                <h4><img src="imgs/sakamoto5.jpg" alt="My cat"></h4>
+                            </section>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            <section id="familly-container">
+                <article class="familly-section">
+                    <img src="imgs/familly.jpg" alt="Photos with my familly">
+                    <h2>My Familly</h2>
+                    <p>This is my familly.</p>
+                    <p>This picture was taken just before I went to Canada. <br>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis tellus nisl hac elementum sociosqu nisi platea integer urna molestie auctor cubilia vitae hac. Nulla hac mi vivamus viverra libero et sit class dictumst finibus dapibus. Class rhoncus nibh ligula proin vestibulum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis tellus nisl hac elementum sociosqu nisi platea integer urna molestie auctor cubilia vitae hac. Nulla hac mi vivamus viverra libero et sit class dictumst finibus dapibus. Class rhoncus nibh ligula proin vestibulum.</p>
+                </article>
+            </section>
+            <section id="cat-container">
+                <article class="cat-section">
+                    <img src="imgs/cat1.jpg" alt="My cat photo">
+                    <h2>Sakamoto</h2>
+                    <p>This is my cat.</p>
+                    <p>He was born in 2019. <br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis tellus nisl hac elementum sociosqu nisi platea integer urna molestie auctor cubilia vitae hac. Nulla hac mi vivamus viverra libero et sit class dictumst finibus dapibus. Class rhoncus nibh ligula proin vestibulum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Turpis tellus nisl hac elementum sociosqu nisi platea integer urna molestie auctor cubilia vitae hac. Nulla hac mi vivamus viverra libero et sit class dictumst finibus dapibus. Class rhoncus nibh ligula proin vestibulum.</p>
+                </article>
             </section>
         </main>
         <!-- FOOTER -->
@@ -49,9 +180,9 @@
             </div>
             <div>
                 <ul class="footer-sm">
-                    <a href="#"><img src="imgs/instagram.svg" alt="My Instagram account"></a>
-                    <a href="#"><img src="imgs/twitter.svg" alt="My Twitter account"></a>
-                    <a href="#"><img src="imgs/linkedin.svg" alt="My Linkedin account"></a>
+                    <li><a href="#"><img src="imgs/instagram.svg" alt="My Instagram account"></a></li>
+                    <li><a href="#"><img src="imgs/twitter.svg" alt="My Twitter account"></a></li>
+                    <li><a href="#"><img src="imgs/linkedin.svg" alt="My Linkedin account"></a></li>
                 </ul>
             </div>
         </footer>

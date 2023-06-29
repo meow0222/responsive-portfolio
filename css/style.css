@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap');
 
 *{
     margin: 0;
@@ -7,57 +7,58 @@
     list-style-type: none;
     font-weight: normal;
     text-decoration: none;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
 }
 
 body {
-    background-color:#F4F5F7
+    background-color: #F4F5F6;
 }
 
 html { 
     scroll-behavior: smooth;
 }
 
+main {
+    margin-left: 130px;
+}
+
 /* ----------HEADER SECTION---------- */
 
 /* Flex container */
 .nav-section { 
-    display: flex;
-    align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
     letter-spacing: 1px;
-    background-color: #fff;
-    padding: 0% 10%;
 }
 
-
-/* Flex box and items */
-.nav-title { 
+.nav-side {
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    top: 0;
+    position: fixed;
+    height: 100vh;
+    justify-content: space-between;
 }
 
-.nav-title p {
-    font-size: 18px;
+
+.nav-image {
+    width: 50px;
 }
 
-.nav-title img { 
-    margin-right: 15px;
-    height: 60px;
-    padding: 3%;
-}
 
 .nav-links { 
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    column-gap: 25px;
+    flex-direction: column;
+    gap: 1rem;
+    letter-spacing: 0; 
+    margin-top: 4rem;
 }
 
-.nav-links a { 
-    color: #141414;
+.nav-links a {
+    font-weight: 700;
+    font-size: 13px;
 }
 
 .nav-links a:hover {
@@ -65,36 +66,42 @@ html {
     font-weight: bold;
 }
 
-/* ----------LANDING PAGE---------- */
-
-/* Block container */
-.landing-page {
-    text-align: center;
-    padding: 110px 10% 230px 10%;
-    /* For Background img (cat) */
-    background-image: url(../imgs/IMG_8532_Original.jpeg);
-    background-size: 35%;
-    background-repeat: no-repeat;
-    background-position: 85% 0%;
-    /**/
+.header-sm {
+    align-items:baseline;    
 }
 
-.landing-page h1{
-    padding: 60px 200px 50px 0px;
+.header-sm img {
+    width: 24px;
+}
+
+.nav-title { 
+    margin-left: 20rem;
+    margin-top: 16rem;
+}
+
+.nav-title h1 {
     font-size: 50px;
-    letter-spacing: 1px;
+    font-weight: 500;
+    font-style: italic;
 }
 
-.landing-page h2{
-    margin-bottom: 10px;
-    padding: 0px 200px 0px 0px;
-    font-size: 30px;
-    letter-spacing: 1px;
+.main-image img {
+    width: 55%;
+    top: 0rem;
+    right: 0rem;
+    position: absolute;
+    z-index: -1;
 }
 
-.landing-page p {
-    padding: 0px 200px 0px 0px;
-    font-size: 18px;
+.hamburger-hidden {
+    display: none;
+}
+
+
+/* ---------- MAIN ---------- */
+
+.container {
+    margin-top: 30rem;
 }
 
 
@@ -102,69 +109,72 @@ html {
 
 
 /* Block container */
-.profile-container {
-    margin: 100px 10%;
-    padding: 3% 5%;
-    border: solid 0.5px #141414;
+#profile-container {
+    padding: 3rem 2rem;
 }
 
-.profile {
+#profile-container h2 {
+    position: relative;/* For underline */
+    margin-bottom: 3rem;
+    font-size: 25px;
     text-align: center;
 }
 
-.profile h1 {
-    position: relative;/* For underline */
-    padding-bottom: 18px;
-    font-size: 25px;
-}
-
-.profile h1:before {
+#profile-container h2:before {
     content: '';
     position: absolute; /* For underline */
     left: 50%;
-    bottom: 15px; /*Vertical position of line*/
+    bottom: -5px; /*Vertical position of line*/
     width: 100px; /*Line length*/
     height: 1px; /*Line thickness*/
     transform: translateX(-50%); /*Justidication*/
     background-color: black; /*Line color*/
     border-radius: 2px; /*Roundness of a line*/
-  }
-
-.profile h2 {
-    position: relative;/* For underline */
-    padding-bottom: 20px;
-    font-size: 20px;
 }
 
-.profile h2:before {
+.profile-section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;  
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.profile h3 {
+    position: relative;/* For underline */
+    font-size: 20px;
+    margin-top: 1rem;
+}
+
+
+.profile h3:before { 
     content: '';
     position: absolute; /* For underline */
     left: 50%;
-    bottom: 15px; /*Vertical position of line*/
-    width: 100px; /*Line length*/
-    height: 1px; /*Line thickness*/
-    transform: translateX(-50%); /*Justification*/
-    background-color: black; /*Line color*/
-    border-radius: 2px; /*Roundness of a line*/
-  }
+    bottom: -5px; /*Vertical position of line */
+    width: 100px; /*Line length */
+    height: 1px; /*Line thickness */
+    transform: translateX(-50%); /*Justification */
+    background-color: black; /*Line color */
+    border-radius: 2px; /*Roundness of a line */
+} 
 
 .profile p {
-    padding-bottom: 30px;
     font-size: 18px;
 }
 
-.map { /* Google Map container*/
-    position: relative;
-    width: 70%;
-    padding-top: 30%;
-}
 
 .map iframe { /* Google Map */
-    position: absolute;
     top: 0;
-    left: 20%;
-    width: 100%;
-    height: 100%;
+    width: 30vw;
+    height: 30vh;
 }
 
 
@@ -172,33 +182,51 @@ html {
 
 
 /* Flex container */
-.hobby-container {
-    display: flex;
-    padding: 0% 10%;
+#hobby-container {
+    padding: 3rem 4rem 8rem 4rem;
 }
 
-/* Flex Box and items */
+#hobby-container h2 {
+    position: relative;/* For underline */
+    margin-bottom: 4rem;
+    font-size: 25px;
+    text-align: center;
+}
+
+#hobby-container h2:before {
+    content: '';
+    position: absolute; /* For underline */
+    left: 50%;
+    bottom: -5px; /*Vertical position of line*/
+    width: 100px; /*Line length*/
+    height: 1px; /*Line thickness*/
+    transform: translateX(-50%); /*Justidication*/
+    background-color: black; /*Line color*/
+    border-radius: 2px; /*Roundness of a line*/
+}
+
+.hobby-section {
+    display: flex;
+    flex-direction: row-reverse;
+}
 
 /* Sidebar */
-.hobby-sidebar {
-    display: flex;
-    flex-direction: column; /* Vertical item */
-    padding: 30px 15px;
-    row-gap: 20px;
-    padding-top: 25px;
-}
 
-.hobby-sidebar h1 {
-    font-size: 25px;
-    letter-spacing: 1px;
+.hobby-sidebar {
+    text-align: center;
 }
 
 .hobby-sidebar ul {
     display: flex;
     flex-direction: column; /* Vertical item */
-    row-gap: 15px;
+    row-gap: 3rem;
     position: sticky; /* Tracking sidebar */
-    top: 5px;
+    top: 8rem;
+}
+
+.hobby-sidebar li {
+    border-right: #31aae2 solid 2px;
+    padding-right: 1rem;
 }
 
 .hobby-sidebar a {
@@ -213,17 +241,16 @@ html {
     top: 62%;
 }
 
-.li-fishing {
+.li-hobby {
     position: relative; /* For sidebar links */
-    border-left: #31aae2 solid 2px;
     padding-left: 10px;
 }
 
-.li-fishing a:hover {
+.li-hobby a:hover {
     color: black;
 }
 
-.li-fishing a::after {
+.li-hobby a::after {
     position: absolute; /* For sidebar links */
     bottom: 0; /*Vertical position of line*/
     left: 50%; /* Justification */
@@ -235,332 +262,124 @@ html {
     transform: translateX(-50%); /* Justification */
   }
   
-.li-fishing a:hover::after{
-    width: 100%;
-}
-
-.li-snowboarding {
-    position: relative;
-    border-left: #31aae2 solid 2px;
-    padding-left: 10px;
-}
-
-.li-snowboarding a:hover {
-    color: black;
-}
-
-.li-snowboarding a::after { /* Same gimmick */
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    content: '';
-    width: 0;
-    height: 2px;
-    background-color: #31aae2;
-    transition: .3s;
-    transform: translateX(-50%);
-  }
-  
-.li-snowboarding a:hover::after{
-    width: 100%;
-}
-
-.li-camping {
-    position: relative;
-    border-left: #31aae2 solid 2px;
-    padding-left: 10px;
-}
-
-.li-camping a:hover {
-    color: black;
-}
-
-.li-camping a::after { /* Same gimmick */
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    content: '';
-    width: 0;
-    height: 2px;
-    background-color: #31aae2;
-    transition: .3s;
-    transform: translateX(-50%);
-  }
-  
-.li-camping a:hover::after{
-    width: 100%;
-}
-
-.li-motorcycle {
-    position: relative;
-    border-left: #31aae2 solid 2px;
-    padding-left: 10px;
-}
-
-.li-motorcycle a:hover {
-    color: black;
-}
-
-.li-motorcycle a::after { /* Same gimmick */
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    content: '';
-    width: 0;
-    height: 2px;
-    background-color: #31aae2;
-    transition: .3s;
-    transform: translateX(-50%);
-  }
-  
-.li-motorcycle a:hover::after{
-    width: 100%;
-}
-
-.li-sakamoto {
-    position: relative;
-    border-left: #31aae2 solid 2px;
-    padding-left: 10px;
-}
-
-.li-sakamoto a:hover {
-    color: black;
-}
-
-.li-sakamoto a::after { /* Same gimmick */
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    content: '';
-    width: 0;
-    height: 2px;
-    background-color: #31aae2;
-    transition: .3s;
-    transform: translateX(-50%);
-  }
-  
-.li-sakamoto a:hover::after{
+.li-hobby a:hover::after{
     width: 100%;
 }
 
 /* Gallery */
-#fishing-section {
+
+.hobby-gallery h3 {
+    font-size: 25px;
+    margin-bottom:1rem;
+}
+
+.fishing {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 40px;
-    column-gap: 30px;
-    padding-top: 8%;
-    padding-left: 2%;
-    position: relative; /* For titles and underline */
+    gap: 2rem;
 }
 
-#fishing-section h2 {
-    position: absolute; /* For titles and underline */
-    top: 3%;
-    font-size: 30px;
-    letter-spacing: 2px;
-}
 
-#fishing-section h2::before {
-    content: '';
-    position: absolute; /* For titles and underline */
-    left: 110%;
-    bottom: 20px; /*Vertical position of line*/
-    width: 820px; /*Line length*/
-    height: 0.5px; /*Line thickness*/
-    background-color: #31aae2; /*Line color*/
-    border-radius: 5px; /*Roundness of a line*/
-}
-
-#fishing-section img {
+.fishing img {
     height: 205px;
     width: 100%;
 }
 
-#fishing-section img:hover{
+.fishing img:hover{
     transform: scale(1.05);
     transition: transform 0.6s ease;
 }
 
 /*--------------------------------------------*/
 
-#snowboarding-section { /* Same gimmick */
+.snowboarding {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 40px;
-    column-gap: 30px;
-    padding-top: 8%;
-    padding-left: 2%;
-    position: relative;
+    gap: 2rem;
 }
 
-#snowboarding-section h2 {
-    position: absolute;
-    top: 3%;
-    font-size: 30px;
-    letter-spacing: 2px;
-}
 
-#snowboarding-section h2::before {
-    content: '';
-    position: absolute;
-    left: 110%;
-    bottom: 20px;/*線の上下位置*/
-    width: 700px;/*線の長さ*/
-    height: 1px;/*線の太さ*/
-    background-color: #31aae2;/*線の色*/
-    border-radius: 2px;/*線の丸み*/
-}
-
-#snowboarding-section img {
+.snowboarding img {
     height: 205px;
     width: 100%;
 }
 
-#snowboarding-section img:hover{
+.snowboarding img:hover{
+    transform: scale(1.05);
+    transition: transform 0.6s ease;
+}
+
+
+/*--------------------------------------------*/
+
+.camping {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.camping img {
+    height: 205px;
+    width: 100%;
+}
+
+.camping img:hover{
     transform: scale(1.05);
     transition: transform 0.6s ease;
 }
 
 /*--------------------------------------------*/
 
-#camping-section { /* Same gimmick */
+.motorcycle {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 40px;
-    column-gap: 30px;
-    padding-top: 8%;
-    padding-left: 2%;
-    position: relative;
+    gap: 2rem;
 }
 
-#camping-section h2 {
-    position: absolute;
-    top: 3%;
-    font-size: 30px;
-    letter-spacing: 2px;
-}
 
-#camping-section h2::before {
-    content: '';
-    position: absolute;
-    left: 110%;
-    bottom: 20px;/*線の上下位置*/
-    width: 790px;/*線の長さ*/
-    height: 1px;/*線の太さ*/
-    background-color: #31aae2;/*線の色*/
-    border-radius: 2px;/*線の丸み*/
-}
-
-#camping-section img {
+.motorcycle img {
     height: 205px;
     width: 100%;
 }
 
-#camping-section img:hover{
+.motorcycle img:hover{
     transform: scale(1.05);
     transition: transform 0.6s ease;
 }
 
 /*--------------------------------------------*/
 
-#motorcycle-section { /* Same gimmick */
+.sakamoto {
     display: flex;
     flex-wrap: wrap;
-    row-gap: 40px;
-    column-gap: 30px;
-    padding-top: 8%;
-    padding-left: 2%;
-    position: relative;
+    gap: 2rem;
 }
 
-#motorcycle-section h2 {
-    position: absolute;
-    top: 3%;
-    font-size: 30px;
-    letter-spacing: 2px;
-}
 
-#motorcycle-section h2::before {
-    content: '';
-    position: absolute;
-    left: 110%;
-    bottom: 20px;/*線の上下位置*/
-    width: 750px;/*線の長さ*/
-    height: 1px;/*線の太さ*/
-    background-color: #31aae2;/*線の色*/
-    border-radius: 2px;/*線の丸み*/
-}
-
-#motorcycle-section img {
+.sakamoto img {
     height: 205px;
     width: 100%;
 }
 
-#motorcycle-section img:hover{
+.sakamoto img:hover{
     transform: scale(1.05);
     transition: transform 0.6s ease;
 }
-
-/*--------------------------------------------*/
-
-#sakamoto-section { /* Same gimmick */
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 40px;
-    column-gap: 30px;
-    padding-top: 8%;
-    padding-left: 2%;
-    padding-bottom: 10%;
-    position: relative;
-}
-
-#sakamoto-section h2 {
-    position: absolute;
-    top: 3%;
-    font-size: 30px;
-    letter-spacing: 2px;
-}
-
-#sakamoto-section h2::before {
-    content: '';
-    position: absolute;
-    left: 110%;
-    bottom: 20px;/*線の上下位置*/
-    width: 750px;/*線の長さ*/
-    height: 1px;/*線の太さ*/
-    background-color: #31aae2;/*線の色*/
-    border-radius: 2px;/*線の丸み*/
-}
-
-#sakamoto-section img {
-    height: 205px;
-    width: 100%;
-}
-
-#sakamoto-section img:hover{
-    transform: scale(1.05);
-    transition: transform 0.6s ease;
-}
-
 
 /* ----------MY FAMILLY PAGE---------- */
 
 /* Block container with float*/
-.familly-container {
-    margin: 60px 10%;
+#familly-container {
+    padding: 3rem 4rem 8rem 4rem;
 }
 
 .familly-section {
-    border: #696969 solid 0.5px;
-    padding: 30px;
+    padding: 2rem 1rem;
+    text-align: center;
 }
 
 .familly-section img {
-    height: 200px;
-    float: left; /* float img */
-    margin-right: 30px;
-    margin-bottom: 10px;
+    width: 40vw;
 } 
 
 .familly-section h1{
@@ -582,20 +401,18 @@ html {
 /* ----------SAKAMOTO PAGE---------- */
 
 /* Block container with float*/
-.cat-container {
-    margin: 60px 10%;
+#cat-container {
+    padding: 3rem 4rem 8rem 4rem;
 }
 
 .cat-section {
-    border: #696969 solid 0.5px;
-    padding: 30px;
+    padding: 0 1rem;
+    text-align: center;
+
 }
 
 .cat-section img {
-    height: 200px;
-    float: right; /* float img */
-    margin-left: 30px;
-    margin-bottom: 10px;
+    width: 40vw;
 } 
 
 .cat-section h1{
@@ -668,3 +485,313 @@ html {
     transform: translateY(-5px);
     transition: .3s;
 }
+
+.hamburger-hidden {
+    display: none;
+}
+
+.sp-links {
+    display: none;
+}
+
+.hamburger-link {
+    display: none;
+}
+
+.sp-sm {
+    display: none;
+}
+
+@media only screen and (max-width: 1000px) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    main {
+        margin-left: 130px;
+        padding: 0;
+    }
+
+    .nav-side {
+        gap: 2rem;
+        justify-content: start;
+    }
+    
+    .main-image img{
+        width: 60vw;
+    }
+
+    .nav-title {
+        margin: 0;
+        padding-top: 29rem;
+        padding-left: 10rem;
+    }
+
+    .nav-title h1 {
+        font-size: 30px;
+    }
+
+    #profile-container {
+        padding: 2rem;
+        margin-top: -25rem;
+    }
+
+    .map iframe {
+        width: 60vw;
+    }
+    
+    #hobby-container {
+        padding: 1rem;
+    }
+
+    #hobby-container h2 {
+        margin-bottom: 2rem;
+    }
+
+    .hobby-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hobby-section h3 {
+        margin: 2rem 0 1rem 0;
+    }
+
+    .hobby-sidebar ul{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .hobby-sidebar a {
+        font-size: 16px;
+    }
+
+    .fishing,
+    .camping,
+    .snowboarding,
+    .motorcycle,
+    .sakamoto {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    #familly-container {
+        padding: 1rem;
+    }
+
+    #cat-container {
+        padding: 1rem;
+    }
+
+    .footer-links {
+        display: none;
+    }
+
+}
+
+
+
+
+@media only screen and (max-width: 767px) {
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    main {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .hamburger-open {
+        position: fixed;  /* 位置を固定 */
+        top: 0;  /* 最上部 */
+        right: 0;  /* 右端 */
+        /* 中の要素を上下中央寄せ */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* サイズ指定 */
+        height: 70px;
+        width: 70px;
+        z-index: 100;
+        cursor: pointer;
+    }
+
+    .hamburger-open span,         /* 真ん中の線 */
+    .hamburger-open span:before,  /* 上の線 */
+    .hamburger-open span:after {  /* 下の線 */
+        content: "";
+        display: block;
+        height: 3px;
+        width: 30px;
+        border-radius: 3px;
+        background-color: #333333;
+        transition: .5s;
+        /* 3本線の位置は絶対位置で指定 */
+        position: absolute;
+    }
+  /* 上の線の位置 */
+    .hamburger-open span:before {
+        /* 真ん中の線と離す距離 */
+        bottom: 8px;
+    }
+  /* 下の線の位置 */
+    .hamburger-open span:after {
+        /* 真ん中の線と離す距離 */
+        top: 8px;
+    }
+
+    #hamburger-check:checked ~ .hamburger-open span {
+        background: rgba(255, 255, 255, 0);
+      }
+
+    #hamburger-check:checked ~ .hamburger-open span::before {
+        bottom: 0;
+        transform: rotate(45deg);
+    }
+      
+    #hamburger-check:checked ~ .hamburger-open span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+    
+    /* メニューのデザイン*/
+    .hamburger-content {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: -100%;/* メニューを画面の外に飛ばす */
+        z-index: 99;
+        transition: 1s;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .hamburger-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 6rem;
+    }
+
+    .hamburger-link li{
+        margin-top: 0.5rem;
+    }
+
+    .hamburger-link a {
+        font-weight: 700;
+        font-style: italic;
+        display: inline-block;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .hamburger-sm {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    /* アイコンがクリックされたらメニューを表示 */
+    #hamburger-check:checked ~ .hamburger-content {
+    left: 0vw;/* メニューを画面に入れる */
+    }
+
+    .header-sm {
+        display: none;
+    }
+
+    .sp-sm {
+        display: block;
+    }
+    
+    .sp-sm img {
+        width: 35px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .main-image img{
+        width: 90%;
+        top: 8rem;
+        left: 1rem;
+        right: 1rem;
+        text-align: center;
+    }
+
+    .nav-title {
+        margin: 0;
+        padding-left: 0;
+        padding-top: 30rem;
+    }
+
+    .nav-title h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    #profile-container {
+        padding: 2rem;
+    }
+
+    .map iframe {
+        width: 100%;
+    }
+    
+    #hobby-container {
+        padding: 1rem;
+    }
+
+    #hobby-container h2 {
+        margin-bottom: 2rem;
+    }
+
+    .hobby-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hobby-section h3 {
+        margin: 2rem 0 1rem 0;
+    }
+
+    .hobby-sidebar ul{
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .hobby-sidebar a {
+        font-size: 16px;
+    }
+
+    .fishing,
+    .camping,
+    .snowboarding,
+    .motorcycle,
+    .sakamoto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #familly-container {
+        padding: 1rem;
+    }
+
+    #cat-container {
+        padding: 1rem;
+    }
+
+    .footer-links {
+        display: none;
+    }
+
+}
+
